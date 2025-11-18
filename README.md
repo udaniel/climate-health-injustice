@@ -11,13 +11,13 @@ The code is provided as a single R script (`code.R`) and the data is supplied in
 ### Citing the Manuscript
 
 If you use the findings from the paper, please cite the original publication.
-*(Placeholder for manuscript citation - update upon publication)*
+*(Placeholder; update upon publication)*
 
 ### Citing the Code/Data
 
 If you use the code or data from this repository, please cite it using the Zenodo DOI. This ensures the dataset is archived and citable.
 
-*(A Zenodo DOI will be generated for the repository upon archival)*
+*(A Zenodo DOI placeholder)*
 
 ## System Requirements
 
@@ -39,12 +39,12 @@ The figures were generated using the following environment:
 *   `code.R`: The R script that generates all four main figures.
 *   `README.md`: This file.
 *   **Data Files:**
-    *   `area graph_inducer perspective for Daniel - updated_July 2025.xlsx`
-    *   `area graph_receptor perspective for Daniel - Updated values_July 2025.xlsx`
-    *   `Damage factors per 100000_results for R_csv.csv`
-    *   `Disparity map_updated values_July 2025.xlsx`
-    *   `figure3_country_names.csv`
-    *   `income graph_figure 1._for Daniel - Copy.csv`
+    *   `area_graph_inducer_updated.xlsx`
+    *   `area_graph_receptor_updated.xlsx`
+    *   `damage_factors_per_100000.csv`
+    *   `disparity_map_updated.xlsx`
+    *   `figure_country_names.csv`
+    *   `income_graph_figure.csv`
 
 ## Instructions to Reproduce Figures
 
@@ -59,7 +59,7 @@ Download the contents of this repository as a ZIP file.
 
 ### 2. Unzip the File
 
-Unzip the downloaded file (`[repository-name]-main.zip`). This will create a folder containing all the necessary files (the `code.R` script and the data files).
+Unzip the downloaded file (`climate-health-injustice-main.zip`). This will create a folder containing all the necessary files (the `code.R` script and the data files).
 
 ### 3. Run the R Script
 
