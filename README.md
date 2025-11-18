@@ -11,6 +11,7 @@ The code is provided as a single R script (`code.R`) and the data is supplied in
 ### Citing the Manuscript
 
 If you use the findings from the paper, please cite the original publication.
+
 *(Placeholder; update upon publication)*
 
 ### Citing the Code/Data
