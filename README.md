@@ -90,3 +90,7 @@ The script will execute and save the four figures as PNG files in your working d
 *   `main_Figure2.png`
 *   `main_Figure3.png`
 *   `main_Figure4.png`
+
+## License
+
+This project is licensed under the MIT License.
