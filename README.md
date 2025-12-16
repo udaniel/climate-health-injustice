@@ -6,20 +6,6 @@ This repository provides the data and R code to reproduce the main figures (Figu
 
 The code is provided as a single R script (`code.R`) and the data is supplied in the corresponding CSV and Excel files.
 
-## Citation
-
-### Citing the Manuscript
-
-If you use the findings from the paper, please cite the original publication.
-
-*(Placeholder; update upon publication)*
-
-### Citing the Code/Data
-
-If you use the code or data from this repository, please cite it using the Zenodo DOI. This ensures the dataset is archived and citable.
-
-*(A Zenodo DOI placeholder)*
-
 ## System Requirements
 
 The figures were generated using the following environment:
