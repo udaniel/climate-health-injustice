@@ -14,6 +14,7 @@ The figures were generated using the following environment:
     *   `tidyverse`: version 2.0.0
     *   `rworldmap`: version 1.3-8
     *   `sf`: version 1.0-19
+    *   `terra`: version 1.7-83
     *   `ggtext`: version 0.1.2
     *   `patchwork`: version 1.3.0
     *   `ggsci`: version 3.2.0
@@ -59,15 +60,31 @@ Unzip the downloaded file (`climate-health-injustice-main.zip`). This will creat
 
 3.  **Open the `code.R` script.**
 
-4.  **Install the required packages.** The first part of the script contains the necessary command. Run this section first if you do not have these packages installed.
+4.  **Install the required packages.** The script uses the pak package manager to ensure robust installation of geospatial dependencies (like sf and terra) and to handle system libraries automatically. The code below (included in the top of code.R) will check your library and install only the missing packages.
+   
     ```r
-    # Install packages (skip if already installed)
-    install.packages(c("tidyverse", "rworldmap", "sf", "ggtext",
-                       "patchwork", "ggsci", "ggrepel", "ggpp",
-                       "janitor"))
+    # Define the list of packages required for the script
+    required_packages <- c("tidyverse", "rworldmap", "sf", "terra",
+                           "ggtext", "patchwork", "ggsci", "ggrepel",
+                           "ggpp", "janitor")
+    
+    # 1. Install 'pak' if it is not already installed
+    if (!require("pak", quietly = TRUE)) install.packages("pak")
+
+    # 2. Check which packages are missing from the computer
+    installed_pkgs <- installed.packages()[, "Package"]
+    missing_pkgs <- required_packages[!required_packages %in% installed_pkgs]
+
+    # 3. Install only the missing packages using pak
+    if (length(missing_pkgs) > 0) {
+    message("Installing missing packages: ", paste(missing_pkgs, collapse = ", "))
+    pak::pkg_install(missing_pkgs)
+    } else {
+    message("All required packages are already installed.")
+    }
     ```
 
-5.  **Run the entire script.** After the packages are installed, you can run the whole `code.R` script from top to bottom.
+6.  **Run the entire script.** After the packages are installed, you can run the whole `code.R` script from top to bottom.
 
 ### 4. Check the Output
 
