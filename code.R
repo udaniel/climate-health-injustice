@@ -2,15 +2,31 @@
 
 
 #### Install packages ####
-# Skip this if you already have installed them
-install.packages(c("tidyverse", "rworldmap", "sf", "ggtext",
-                   "patchwork", "ggsci", "ggrepel", "ggpp",
-                   "janitor"))
+# Define the list of packages required for the script
+required_packages <- c("tidyverse", "rworldmap", "sf", "terra", 
+                       "ggtext", "patchwork", "ggsci", "ggrepel", 
+                       "ggpp", "janitor")
+# 1. Install 'pak' if it is not already installed
+if (!require("pak")) install.packages("pak")
+
+# 2. Check which packages are missing from the computer
+installed_pkgs <- installed.packages()[, "Package"]
+missing_pkgs <- required_packages[!required_packages %in% installed_pkgs]
+
+# 3. Install only the missing packages using pak
+if (length(missing_pkgs) > 0) {
+    message("Installing missing packages: ", paste(missing_pkgs, collapse = ", "))
+    pak::pkg_install(missing_pkgs)
+} else {
+    message("All required packages are already installed.")
+}
+
 
 #### Load packages ####
 library(tidyverse)
 library(rworldmap)
 library(sf)
+library(terra)
 library(ggtext)
 library(patchwork)
 library(ggsci)
